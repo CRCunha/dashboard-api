@@ -1,6 +1,6 @@
-const express = require("express");
-const cors = require("cors");
-const bodyParser = require("body-parser");
+const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
 
 const api = express();
 api.use(cors());
@@ -9,8 +9,9 @@ api.use(bodyParser.json());
 
 // ======================= Importação dos controllers =======================//
 
-require("./Controllers/users")(api);
-require("./Controllers/bar")(api);
+require('./Controllers/users')(api);
+require('./Controllers/bar')(api);
+require('./Controllers/infoCard')(api);
 
 // =========================================================================//
 
